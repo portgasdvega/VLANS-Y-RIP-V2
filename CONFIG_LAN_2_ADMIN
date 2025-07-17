@@ -1,0 +1,50 @@
+AREA DE ADMINISTRACION-LAN 2
+
+SWITCH 2
+Switch>enable
+Switch#configure terminal
+Switch(config)#vlan 10
+Switch(config-vlan)#name RRHH
+Switch(config-vlan)#exit
+Switch(config)#vlan 20
+Switch(config-vlan)#name NINTER
+Switch(config-vlan)#exit
+Switch(config)#interface fa0/2
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#exit
+Switch(config)#interface fa0/3
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#exit
+Switch(config)#interface fa0/1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#exit
+
+
+
+Router LAN 2
+Router>enable
+Router#configure terminal
+Router(config)#interface fa0/0
+Router(config-if)#no shutdown
+Router(config-if)#exit
+Router(config)#interface fa0/0.10
+Router(config-subif)#encapsulation dot1Q 10
+Router(config-subif)#ip address 192.168.10.1 255.255.255.0
+Router(config-subif)#exit
+Router(config)#interface fa0/0.20
+Router(config-subif)#encapsulation dot1Q 20
+Router(config-subif)#ip address 192.168.20.1 255.255.255.0
+Router(config-subif)#exit
+Router(config)#interface fa0/1
+Router(config-if)#ip address 192.168.0.2 255.255.255.252
+Router(config-if)#no shutdown
+Router(config-if)#exit
+Router(config)#router rip
+Router(config-router)#version 2
+Router(config-router)#network 192.168.10.0
+Router(config-router)#network 192.168.20.0
+Router(config-router)#network 192.168.0.0
+Router(config-router)#no auto-summary
+Router(config-router)#exit
