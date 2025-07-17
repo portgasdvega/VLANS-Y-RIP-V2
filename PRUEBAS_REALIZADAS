@@ -1,0 +1,106 @@
+PING DE RRHH(LAN2) A LAN 1 Y 3
+
+Cisco Packet Tracer PC Command Line 1.0
+C:\>ping 192.168.30.2 (CONTADURIA-LAN3)
+
+Pinging 192.168.30.2 with 32 bytes of data:
+
+Reply from 192.168.30.2: bytes=32 time<1ms TTL=125
+Reply from 192.168.30.2: bytes=32 time<1ms TTL=125
+Reply from 192.168.30.2: bytes=32 time<1ms TTL=125
+Reply from 192.168.30.2: bytes=32 time=1ms TTL=125
+
+Ping statistics for 192.168.30.2:
+Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+Minimum = 0ms, Maximum = 1ms, Average = 0ms
+
+C:\>ping 192.168.40.2 (ECONOMIA-LAN 3)
+
+Pinging 192.168.40.2 with 32 bytes of data:
+
+Reply from 192.168.40.2: bytes=32 time=1ms TTL=125
+Reply from 192.168.40.2: bytes=32 time<1ms TTL=125
+Reply from 192.168.40.2: bytes=32 time=1ms TTL=125
+Reply from 192.168.40.2: bytes=32 time<1ms TTL=125
+
+Ping statistics for 192.168.40.2:
+Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+Minimum = 0ms, Maximum = 1ms, Average = 0ms
+
+C:\>ping 192.168.1.2 (COMPUTO-LAN 1)
+
+Pinging 192.168.1.2 with 32 bytes of data:
+
+Reply from 192.168.1.2: bytes=32 time<1ms TTL=126
+Reply from 192.168.1.2: bytes=32 time<1ms TTL=126
+Reply from 192.168.1.2: bytes=32 time<1ms TTL=126
+Reply from 192.168.1.2: bytes=32 time<1ms TTL=126
+
+Ping statistics for 192.168.1.2:
+Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+
+
+PING DE ECONOMIA(LAN 3) A LAN 1 Y 2
+Cisco Packet Tracer PC Command Line 1.0
+C:\>ping 192.168.10.2 (RRHH-LAN2)
+
+Pinging 192.168.10.2 with 32 bytes of data:
+
+Reply from 192.168.10.2: bytes=32 time<1ms TTL=125
+Reply from 192.168.10.2: bytes=32 time=13ms TTL=125
+Reply from 192.168.10.2: bytes=32 time<1ms TTL=125
+Reply from 192.168.10.2: bytes=32 time=13ms TTL=125
+
+Ping statistics for 192.168.10.2:
+Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+Minimum = 0ms, Maximum = 13ms, Average = 6ms
+
+C:\>ping 192.168.20.2 (NEGOCIOS INTERNACIONALES-LAN 2)
+
+Pinging 192.168.20.2 with 32 bytes of data:
+
+Reply from 192.168.20.2: bytes=32 time<1ms TTL=125
+Reply from 192.168.20.2: bytes=32 time<1ms TTL=125
+Reply from 192.168.20.2: bytes=32 time<1ms TTL=125
+Reply from 192.168.20.2: bytes=32 time<1ms TTL=125
+
+Ping statistics for 192.168.20.2:
+Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.1.2 (COMPUTO LAN 1)
+
+Pinging 192.168.1.2 with 32 bytes of data:
+
+Reply from 192.168.1.2: bytes=32 time<1ms TTL=126
+Reply from 192.168.1.2: bytes=32 time<1ms TTL=126
+Reply from 192.168.1.2: bytes=32 time<1ms TTL=126
+Reply from 192.168.1.2: bytes=32 time=13ms TTL=126
+
+Ping statistics for 192.168.1.2:
+Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+Minimum = 0ms, Maximum = 13ms, Average = 3ms
+
+
+RUTAS DE ROUTER 1 (LAN 1-AREA COMPUTO)
+Codes: L - local, C - connected,  R – RIP.
+192.168.0.0/24 is variably subnetted, 4 subnets, 2 masks
+C 192.168.0.0/30 is directly connected, FastEthernet0/1
+L 192.168.0.1/32 is directly connected, FastEthernet0/1
+C 192.168.0.4/30 is directly connected, FastEthernet1/0
+L 192.168.0.5/32 is directly connected, FastEthernet1/0
+192.168.1.0/24 is variably subnetted, 2 subnets, 2 masks
+C 192.168.1.0/24 is directly connected, FastEthernet0/0
+L 192.168.1.1/32 is directly connected, FastEthernet0/0
+R 192.168.10.0/24 [120/1] via 192.168.0.2, 00:00:17, FastEthernet0/1
+R 192.168.20.0/24 [120/1] via 192.168.0.2, 00:00:17, FastEthernet0/1
+R 192.168.30.0/24 [120/1] via 192.168.0.6, 00:00:19, FastEthernet1/0
+R 192.168.40.0/24 [120/1] via 192.168.0.6, 00:00:19, FastEthernet1/0
