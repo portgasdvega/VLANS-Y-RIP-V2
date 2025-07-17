@@ -70,7 +70,7 @@ Se configuraron los switches con VLANs, asignando puertos de acceso por departam
 Este ejercicio demuestra cómo las VLANs mejoran la organización y seguridad de una red, permitiendo segmentar por departamentos sin requerir equipos físicos separados. Con RIP v2, los routers pueden aprender rutas automáticamente y escalar la red fácilmente.
 
 
-## ✍Autor
+## Autor
 
 Emiliano Martínez Vega  
 Repositorio creado para prácticas profesionales en redes y ciberseguridad.
