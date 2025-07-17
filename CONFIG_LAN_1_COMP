@@ -1,0 +1,24 @@
+AREA DE COMPUTO-LAN 1 
+
+ROUTER 1
+
+Router>enable
+Router#configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+Router(config)#interface fa0/0
+Router(config-if)#ip address 192.168.1.1 255.255.255.0
+Router(config-if)#no shutdown
+Router(config-if)#exit
+Router(config)#interface fa0/1
+Router(config-if)#ip address 192.168.0.1 255.255.255.252
+Router(config-if)#no shutdown
+Router(config-if)#exit
+Router(config)#interface fa1/0
+Router(config-if)#ip address 192.168.0.5 255.255.255.252
+Router(config-if)#no shutdown
+Router(config-if)#exit
+Router(config)#router rip 
+Router(config-router)#network 192.168.1.0
+Router(config-router)#network 192.168.0.0
+Router(config-router)#no auto-summary
+Router(config-router)#exit
